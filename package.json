@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +13,7 @@
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
     "json2xls": "^0.1.2",
+    "nodemon": "^1.11.0",
     "volleyball": "^1.4.1"
   }
 }
