@@ -1,8 +1,10 @@
-const express = require('express')
+const express = require('express');
 const app = express();
-const volleyball = require('volleyball')
-const bodyParser = require('body-parser')
+const volleyball = require('volleyball');
+const bodyParser = require('body-parser');
 const PORT = 3000;
+const json2xls = require('json2xls');
+const fs = require('fs');
 
 app.use(volleyball);
 app.use(express.static('public'));
@@ -14,6 +16,8 @@ app.get('/', (req, res) => {
 })
 app.post("/formSubmit", (req, res) => {
     console.log(req.body)
+    var xls = json2xls(req.body);
+    fs.writeFileSync('data.xlsx', xls, 'binary');
 })
 
 app.listen(PORT, () => {
