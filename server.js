@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
-    res.send('hello');
+    res.sendFile(__dirname + '/index.html');
 })
 
 app.listen(PORT, () => {
