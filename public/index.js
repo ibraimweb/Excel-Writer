@@ -1,12 +1,15 @@
 var jsonObj = {};
-
-$('form input').map(function (idx, element) {
+var inputs = $('form input');
+inputs.map(function (idx, element) {
     $(element).on('change', (val) => {
         jsonObj[element.id] = element.value;
     })
 })
 $('#submit').on('click', (evt) => {
     evt.preventDefault();
-    console.log(jsonObj);
+    axios.post("/formSubmit", jsonObj)
+    inputs.map((idx, element) => {
+        element.value = "";
+    })
 })
 

@@ -12,7 +12,11 @@ app.use(bodyParser.json())
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 })
+app.post("/formSubmit", (req, res) => {
+    console.log(req.body)
+})
 
 app.listen(PORT, () => {
     console.log('listening on port', PORT)
 });
+
