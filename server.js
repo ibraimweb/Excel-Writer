@@ -16,10 +16,10 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 })
 app.get('/api', (req, res) => {
-    models.myTable.findAll().then((result)=> res.json(result));
+    models.repairInvoice.findAll().then((result)=> res.json(result));
 })
 app.post('/api', (req, res) => {
-    models.myTable.create(req.body);
+    models.repairInvoice.create(req.body);
 })
 app.post("/formSubmit", (req, res) => {
     console.log(req.body)
@@ -27,7 +27,7 @@ app.post("/formSubmit", (req, res) => {
     fs.writeFileSync('data.xlsx', xls, 'binary');
 })
 
-models.myTable.sync({logging: false, force: false})
+models.repairInvoice.sync({logging: false, force: true})
 .then(function () {
     app.listen(PORT, () => {
         console.log('listening on port', PORT)

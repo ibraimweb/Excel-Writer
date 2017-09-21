@@ -1,7 +1,7 @@
 var Sequelize = require('sequelize')
 var db = new Sequelize('postgres://SMILODON_2:a@localhost:5432/excel-writer-db')
 
-var myTable = db.define('myTable', {
+var repairInvoice = db.define('repairInvoice', {
     title: Sequelize.STRING, 
     name: {
         type: Sequelize.STRING
@@ -11,4 +11,4 @@ var myTable = db.define('myTable', {
     }
 });
 
-module.exports = {db, myTable};
+module.exports = {db, repairInvoice};
