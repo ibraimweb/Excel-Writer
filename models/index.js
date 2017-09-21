@@ -1,11 +1,12 @@
 var Sequelize = require('sequelize')
-var db = new Sequelize('postgres://@localhost:5432/excel-writer-db')
+var db = new Sequelize('postgres://SMILODON_2:a@localhost:5432/excel-writer-db')
 
 var associateToComplete = db.define('associateToComplete', {
+    date: Sequelize.STRING,
     needs_by: Sequelize.STRING,
     associate_name: Sequelize.STRING,
     serial_number: Sequelize.STRING,
-    covered_under_warranty: Sequelize.BOOLEAN,
+    warranty: Sequelize.BOOLEAN,
     lock_combo: Sequelize.STRING,
     purchase_origin: Sequelize.STRING
 });
