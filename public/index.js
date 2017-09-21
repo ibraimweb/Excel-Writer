@@ -7,7 +7,7 @@ inputs.map(function (idx, element) {
 })
 $('#submit').on('click', (evt) => {
     evt.preventDefault();
-    axios.post("/formSubmit", jsonObj)
+    axios.post("/api/client_form", jsonObj)
     inputs.map((idx, element) => {
         element.value = "";
     })
