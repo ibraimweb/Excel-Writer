@@ -14,12 +14,13 @@ app.use(volleyball);
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+app.use(json2xls.middleware);
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 })
 app.get('/api', (req, res) => {
-    clientToComplete.findAll().then((result)=> res.json(result));
+    clientToComplete.findAll().then((result) => res.xls('data.xlsx', [{a: 1234}, {a: 5678}]));
 })
 app.post('/api/client_form', (req, res) => {
     var date = req.body.date;
@@ -42,10 +43,17 @@ app.post('/api/client_form', (req, res) => {
     associateToComplete.create({date, needs_by, associate_name, serial_number, warranty, lock_combo, purchase_origin});
 })
 
-app.post("/formSubmit", (req, res) => {
-    console.log(req.body)
-    var xls = json2xls(req.body);
-    fs.writeFileSync('data.xlsx', xls, 'binary');
+app.get('/api/getAll', (req, res) => {
+    clientToComplete.findAll().then(clientResult => {
+        associateToComplete.findAll().then(associateResult => {res.json({clientForm: clientResult, associateForm: associateResult})})
+    }).catch(console.error);
+})
+
+app.get("/export", (req, res) => {
+    clientToComplete.findAll().then(clientResult => {
+        associateToComplete.findAll().then(associateResult => { var result = {"a": 1234567};
+        res.xls('data.xlsx', result)})
+    }).catch(console.error);
 })
 
 models.db.sync({logging: false, force: false})

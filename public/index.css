@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "Univers LT Std 47 Light Condensed";
+    src: url(UniversLTStd-LightCn.woff) format("woff");
+}
+
+img {
+    display: block;
+    margin: auto;
+    margin-top: 5%;
+    width: 25%;
+}
+
+body {
+    font-family: "Univers LT Std 47 Light Condensed" !important;
+}
+
+/* #Associate, #Client {
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+    margin-right: 10px;
+    float: left;
+  } */

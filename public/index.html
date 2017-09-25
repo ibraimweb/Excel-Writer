@@ -1,123 +1,137 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
     <div id="wrapper" class="container">
-            <div class="row">
-                <form action="#" class="col s12">
-                        <div class="row">
-                                <div class="input-field col s6">
-                                <h5> Associate to complete:</h5>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s3">
-                                    <input id="date" type="text" class="validate">
-                                    <label for="date">Date</label>
-                                </div>
-                                <div class="input-field col s3">
-                                    <input id="needs_by" type="text" class="validate">
-                                    <label for="needs_by">Needs by</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s3">
-                                    <input id="associate_name" type="text">
-                                    <label for="associate_name">Associate Name</label>
-                                </div>
-                        
-                                <div class="input-field col s3">
-                                    <input id="serial_number" type="text">
-                                    <label for="serial_number">Serial Number #</label>
-                                </div>
-                            </div>
-                                <div class="row">
-                                    <div class="col s6">
-                                        <input id="warranty" type="checkbox">
-                                        <label for="warranty">Covered under warranty (check the box if true) </label>
-                                    </div>
-                                </div>
-                            <div class="row">
-                                <div class="input-field col s6">
-                                    <input id="lock_combo" type="text">
-                                    <label for="lock_combo">Lock Combo</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s6">
-                                    <input id="purchase_origin" type="text">
-                                    <label for="purchase_origin">Purchase origin </label>
-                                </div>
-                            </div>
+        <div class="row">
+            <form action="#">
+                <div class="container" class="center-align">
+                    <img src="rimowa_logo.png" class="center-align">
+                </div>
 
+                <div id="Associate" class="col s5 offset-s1">
                     <div class="row">
-                        <div class="input-field col s3">
-                        <h5> Client to complete:</h5>
+                        <div class="input-field col s6">
+                            <h5> Associate to complete:</h5>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s3">
+                        <div class="input-field col s6">
+                            <input id="date" type="text" class="validate">
+                            <label for="date">Date</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="needs_by" type="text" class="validate">
+                            <label for="needs_by">Needs by</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="associate_name" type="text">
+                            <label for="associate_name">Associate Name</label>
+                        </div>
+
+                        <div class="input-field col s6">
+                            <input id="serial_number" type="text">
+                            <label for="serial_number">Serial Number #</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <input id="warranty" type="checkbox">
+                            <label for="warranty">Covered under warranty (check the box if true) </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="lock_combo" type="text">
+                            <label for="lock_combo">Lock Combo</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="purchase_origin" type="text">
+                            <label for="purchase_origin">Purchase origin </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="Client" class="col s5 offset-s1">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <h5> Client to complete:</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s6">
                             <input id="first_name" type="text" class="validate">
                             <label for="first_name">First Name</label>
                         </div>
-                        <div class="input-field col s3">
+                        <div class="input-field col s6">
                             <input id="last_name" type="text" class="validate">
                             <label for="last_name">Last Name</label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s2">
+                        <div class="input-field col s4">
                             <input id="company_name" type="text">
                             <label for="company_name">Company Name</label>
                         </div>
-                
-                        <div class="input-field col s2">
+
+                        <div class="input-field col s4">
                             <input id="phone_number" type="text">
                             <label for="phone_number">Phone</label>
                         </div>
-                    
-                
-                        <div class="input-field col s2">
+
+
+                        <div class="input-field col s4">
                             <input id="email" type="email" class="validate">
                             <label for="email">Email</label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s6">
+                        <div class="input-field col s12">
                             <input id="shipping_address" type="text">
                             <label for="shipping_address">Shipping Address</label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col s6">
+                        <div class="col s12">
                             <input id="ship_when_complete" type="checkbox">
                             <label for="ship_when_complete">Ship when complete (check the box if true) </label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s6">
+                        <div class="input-field col s12">
                             <input id="reason_for_repair" type="text">
                             <label for="reason_for_repair">Reason for repair</label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s6">
+                        <div class="input-field col s12">
                             <p id="sign">Signature: __________________</p>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col s12">
+                        <div class="col s6">
                             <button id="submit" class="btn waves-effect waves-light" type="submit" name="action">Submit
-    <i class="material-icons right">send</i>
-  </button>
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </div>
+                        <div class="col s6">
+                            <button id="export" class="btn waves-effect waves-light" type="submit" name="action">Export to XLS
+                                <i class="material-icons right">send</i>
+                            </button>
                         </div>
                     </div>
-                </form>
-            </div>
+                </div>
+            </form>
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
