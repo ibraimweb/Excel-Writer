@@ -7,7 +7,7 @@ inputs.map(function (idx, element) {
 })
 $('#submit').on('click', (evt) => {
     evt.preventDefault();
-    axios.post("/api/client_form", jsonObj).then(Materialize.toast('Information has been sent!', 4000, 'rounded'));
+    axios.post("/api/order_form", jsonObj).then(Materialize.toast('Information has been sent!', 4000, 'rounded'));
     inputs.map((idx, element) => {
         element.value = "";
     })
@@ -15,6 +15,5 @@ $('#submit').on('click', (evt) => {
 
 $('#export').on('click', (evt) => {
     evt.preventDefault();
-    axios.get("/export").then(Materialize.toast('Exporting....', 4000, 'rounded'));
+    axios.get("/export").then(Materialize.toast('Exporting....', 4000, 'rounded')).then(window.location.replace("http://localhost:3000/export"));
 })
-
