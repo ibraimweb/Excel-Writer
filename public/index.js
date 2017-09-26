@@ -15,5 +15,5 @@ $('#submit').on('click', (evt) => {
 
 $('#export').on('click', (evt) => {
     evt.preventDefault();
-    axios.get("/export").then(Materialize.toast('Exporting....', 4000, 'rounded')).then(window.location.replace("http://localhost:3000/export"));
+    axios.get("/export").then(Materialize.toast('Exporting....', 4000, 'rounded')).then(window.location.replace("https://excel-writer.herokuapp.com/export"));
 })
