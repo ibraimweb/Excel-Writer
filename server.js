@@ -19,9 +19,9 @@ app.use(json2xls.middleware);
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 })
-app.get('/api', (req, res) => {
-    repairTable.findAll().then((result) => res.xls('data.xlsx', ));
-})
+// app.get('/api', (req, res) => {
+//     repairTable.findAll().then((result) => res.xls('data.xlsx', ));
+// })
 app.post('/api/order_form', (req, res) => {
     repairTable.create(req.body);
 })

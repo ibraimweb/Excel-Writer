@@ -1,5 +1,5 @@
 var Sequelize = require('sequelize')
-var db = new Sequelize('postgres://SMILODON_2:a@localhost:5432/excel-writer-db')
+var db = new Sequelize('postgres://localhost:5432/excel-writer-db')
 
 var repairTable = db.define('repairTable', {
     date: Sequelize.STRING,
